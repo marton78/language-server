@@ -1,0 +1,19 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.buildStepTexts = buildStepTexts;
+const gherkin_utils_1 = require("@cucumber/gherkin-utils");
+const language_service_1 = require("@cucumber/language-service");
+function buildStepTexts(gherkinSource) {
+    const { gherkinDocument } = (0, language_service_1.parseGherkinDocument)(gherkinSource);
+    if (!gherkinDocument) {
+        return [];
+    }
+    const stepTexts = [];
+    (0, gherkin_utils_1.walkGherkinDocument)(gherkinDocument, undefined, {
+        step(step) {
+            stepTexts.push(step.text);
+        },
+    });
+    return stepTexts;
+}
+//# sourceMappingURL=buildStepTexts.js.map
