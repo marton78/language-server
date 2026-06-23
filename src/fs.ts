@@ -6,6 +6,8 @@ export const glueExtByLanguageName: Record<LanguageName, string[]> = {
   javascript: ['.js', '.cjs', '.mjs', '.jsx'],
   tsx: ['.ts', '.cts', '.mts', '.tsx'],
   java: ['.java'],
+  kotlin: ['.kt', '.kts'],
+  scala: ['.scala'],
   c_sharp: ['.cs'],
   php: ['.php'],
   ruby: ['.rb'],
