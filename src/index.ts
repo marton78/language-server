@@ -1,3 +1,3 @@
 export * from './CucumberLanguageServer.js'
 export * from './Files.js'
-export { CucumberExpressions, Suggestion } from '@cucumber/language-service'
+export { CucumberExpressions, Suggestion } from '@marton78/cucumber-language-service'
